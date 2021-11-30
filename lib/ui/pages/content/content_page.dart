@@ -45,13 +45,15 @@ class _State extends State<ContentPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        picUrl: 'https://uifaces.co/our-content/donated/gPZwCbdS.jpg',
-        tile: const Text("Red Egresados"),
-        context: context,
-        // ---------------------------------------
-        // 1. Implementa el metodo onSignOff para redirigir a la ruta de autenticación
-        // ---------------------------------------
-      ),
+          picUrl: 'https://uifaces.co/our-content/donated/gPZwCbdS.jpg',
+          tile: const Text("Red Egresados"),
+          context: context,
+          // ---------------------------------------
+          // 1. Implementa el metodo onSignOff para redirigir a la ruta de autenticación
+          // ---------------------------------------
+          onSignOff: () {
+            Get.offNamed('/auth');
+          }),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 24.0, horizontal: 16.0),
